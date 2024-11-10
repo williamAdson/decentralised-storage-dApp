@@ -58,11 +58,11 @@ function App() {
         <h5 className='text-3xl p-2 mt-3'>Hello Mother❤</h5>
         {/* store data to the decentralized storage */}
         <form className='form' onSubmit={handleSubmit}>
-          <input 
-            type='file' 
-            name='data' 
-            onChange={retrieveFile} 
-            className='border-2'/>
+          <input
+            type='file'
+            name='data'
+            onChange={retrieveFile}
+            className='border-2' />
           <button type='submit' className='btn'> Upload File</button>
           {loading && (<p>Loading...</p>)}
         </form>
@@ -70,7 +70,7 @@ function App() {
         <div className=''>
           {cid && <p className='mb-3 p-3 italic'>File CID: {cid}</p>}
           <div className='p-2'>
-          { dataArr.length !== 0 ? dataArr.map((item)=><img src={item} alt='ipfs file' />): <h5 className='text-center'>Upload your files</h5>}
+            {dataArr.length !== 0 ? dataArr.map((item) => <img src={item} alt='ipfs file' />) : <h5 className='text-center'>Upload your files</h5>}
           </div>
         </div>
       </div>
